@@ -4,8 +4,10 @@
   "description": "just for practice",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon dist/main",
+    "start": "node dist/main",
+    "dev": "nodemon dist/main",
     "watch": "./node_modules/.bin/tsc --watch",
+    "both":"concurrently \"npm run watch\" \"npm run dev\"",
     "build": "./node_modules/.bin/tsc",
     "open": "concurrently \"http-server ./ -a localhost -p 8080 -o index.html\" \"npm run watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
